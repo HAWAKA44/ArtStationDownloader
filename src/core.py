@@ -87,7 +87,7 @@ class Core:
 
     def get_projects(self, username):
         data = []
-        if username is not '':
+        if username != '':
             page = 0
             while True:
                 page += 1
@@ -108,7 +108,7 @@ class Core:
                 if total_count == 0:
                     self.log("[Error] Please input right username")
                     break
-                if page is 1:
+                if page == 1:
                     self.log('\n==========[{}] BEGIN=========='.format(username))
                 data_fragment = j['data']
                 data += data_fragment
@@ -120,7 +120,7 @@ class Core:
 
     def download_by_username(self, username):
         data = self.get_projects(username)
-        if len(data) is not 0:
+        if len(data) != 0:
             future_list = []
             for project in data:
                 future = self.executor.submit(
