@@ -8,31 +8,7 @@
 
 # ---------------------
 
-import sys
 import configparser
-
-
-class Config:
-    def __init__(self, path):
-        self.path = path
-        self.cf = configparser.ConfigParser()
-        self.cf.read(self.path)
-
-    def get(self, field, key):
-        result = ""
-        try:
-            result = self.cf.get(field, key)
-        except:
-            result = ""
-        return result
-
-    def set(self, filed, key, value):
-        try:
-            self.cf.set(field, key, value)
-            self.cf.write(open(self.path, 'w'))
-        except:
-            return False
-        return True
 
 
 def read_config(config_file_path, field, key):

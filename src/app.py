@@ -4,7 +4,7 @@ import os
 from concurrent import futures
 
 from tkinter import Tk, Frame, Label, Button, Scrollbar, Text, Entry, messagebox, filedialog  # 引入Tkinter工具包
-from tkinter import TOP, LEFT, BOTTOM, BOTH, X, Y, END
+from tkinter import TOP, LEFT, BOTH, X, Y, END
 from tkinter import ttk
 
 import config
